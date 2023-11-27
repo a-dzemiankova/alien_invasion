@@ -30,7 +30,7 @@ class AlienInvasion:
         self._create_fleet()
 
         self.play_button = Button(self, "Play")
-        self.message = Message(self, "Game over:(", self.play_button)
+        self.message_game_over = Message(self, "Game over:(", self.play_button)
         self.sounds = Sounds()
 
     def _check_events(self):
@@ -168,7 +168,7 @@ class AlienInvasion:
         if not self.stats.game_active:
             self.play_button.draw_button()
         if self.stats.game_lost:
-            self.message.show_message()
+            self.message_game_over.show_message()
         pygame.display.flip()
 
     def _ship_hit(self):
