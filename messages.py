@@ -10,12 +10,12 @@ class Message:
         self.play_button = ai_game.play_button
 
         self.text_color = (30, 30, 30)
-        self.font = pygame.font.SysFont(None, 36)
+        self.font = pygame.font.Font(self.settings.font, 40)
         self.prep_msg(msg)
 
     def prep_msg(self, msg):
         self.msg_image = self.font.render(msg, True,
-                                      (180, 0, 0), self.settings.bg_color)
+                                      (245, 0, 0))
 
         self.msg_image_rect = self.msg_image.get_rect()
         self.msg_image_rect.midtop = self.ai_game.play_button.msg_image_rect.midbottom

@@ -29,6 +29,8 @@ class Settings:
         filepath = 'game_files/'
         self.filename = f"{filepath}high_score.txt"
 
+        self.font = 'core_files/fonts/H4VintageRetroRegular.ttf'
+
     def initialize_dynamic_settings(self):
         self.ship_speed_factor = 1.5
         self.bullet_speed_factor = 3
